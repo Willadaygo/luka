@@ -1,0 +1,148 @@
+/*------------------------------------*\
+  #Global Variables
+\*------------------------------------*/
+
+/**
+ * Global Variables.
+ */
+
+:root {
+  
+  /* Base Spacing Units */
+  
+  /* Base Max Width */
+
+  /* Transition */
+
+  /* Font */ /* Light */
+
+  /* UI */
+
+  /* Type */
+  
+}
+
+/**
+ * Breakpoints.
+ */
+
+/*------------------------------------*\
+  #More
+\*------------------------------------*/
+
+.More {
+
+}
+
+.More .media {
+
+  margin-bottom: 0
+  
+}
+
+.More__title {
+
+  margin-bottom: 0;
+
+  padding-top: .7em;
+
+  padding-bottom: .7em
+  
+}
+
+.More__item {
+
+  display: block;
+
+  position: relative
+  
+}
+
+@media(max-width: 599px) {
+
+  .More__item {
+
+    background-color: #1e1e1e
+  
+  }
+
+  .grid__item:nth-child(odd) .More__item {
+
+    background-color: #2F2F2F
+  
+  }
+  
+}
+
+@media(max-width: 799px) and    (min-width: 600px) {
+
+  .More__item {
+
+    background-color: #1e1e1e
+  
+  }
+
+  .grid__item:nth-child(1) .More__item,
+        .grid__item:nth-child(4) .More__item,
+        .grid__item:nth-child(5) .More__item,
+        .grid__item:nth-child(8) .More__item {
+
+    background-color: #2F2F2F
+  
+  }
+  
+}
+
+.More__content {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  bottom: 0;
+
+  right: 0;
+
+  z-index: 1;
+
+  width: 100%;
+
+  height: 100%;
+
+  padding: 25px;
+
+  transition: .25s ease;
+
+  color: #676767
+  
+}
+
+.More__item:hover .More__content {
+
+  opacity: 1
+  
+}
+
+@media   (min-width: 800px) {
+
+  .More__content {
+
+    opacity: 0;
+
+    color: #ffffff;
+
+    background-color: rgba(0, 0, 0, 0.5)
+  
+  }
+  
+}
+
+.More__media {
+
+  opacity: .05;
+
+  background-color: #fff
+  
+}

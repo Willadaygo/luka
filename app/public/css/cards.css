@@ -1,0 +1,243 @@
+/*------------------------------------*\
+  #Global Variables
+\*------------------------------------*/
+
+/**
+ * Global Variables.
+ */
+
+:root {
+  
+  /* Base Spacing Units */
+  
+  /* Base Max Width */
+
+  /* Transition */
+
+  /* Font */ /* Light */
+
+  /* UI */
+
+  /* Type */
+  
+}
+
+/**
+ * Breakpoints.
+ */
+
+/*------------------------------------*\
+  #Cards
+\*------------------------------------*/
+
+.Card {
+  position: relative;
+  width: 100%
+
+}
+
+.Card__text {
+  padding: 25px
+  
+}
+
+@media   (min-width: 800px) {
+
+  .Card__text {
+    padding: 40px
+  
+  }
+  
+}
+
+.Card__text h1 {
+  max-width: 10.5em
+  
+}
+
+@media   (min-width: 800px) {
+
+  .Card__text h1 {
+    font-size: calc(1em + 1.8vw)
+  
+  }
+  
+}
+
+@media   (min-width: 1600px) {
+
+  .Card__text h1 {
+    font-size: 45px
+  
+  }
+  
+}
+
+.Card__text h3 {
+  max-width: 12em
+  
+}
+
+.Card--intro .Card__text {
+  padding-top: 120px;
+  padding-bottom: 120px
+  
+}
+
+.Card--split .Card__text {
+  width: 50%;
+  left: auto
+  
+}
+
+.Card__media {
+  margin-bottom: 0;
+  background-color: transparent
+  
+}
+
+@media   (min-width: 800px) {
+
+  .Card__media {
+    min-height: 400px
+  
+  }
+  
+}
+
+@media(max-width: 799px) {
+
+  .Card__media {}
+
+  .Card__media.media--square {
+    padding-bottom: 66.66667%
+  
+  }
+  
+}
+
+.Card__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+  
+}
+
+@media(max-width: 799px) {
+
+  .Card__bg {
+    z-index: 1;
+    opacity: 0
+  
+  }
+  
+}
+
+.Card--split .Card__bg {
+  width: 50%;
+  left: auto;
+  z-index: 1
+  
+}
+
+.Card__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  transition: .25s ease
+  
+}
+
+.Card--work .Card__hover {
+  color: #676767
+  
+}
+
+.Card--split .Card__hover {
+  background-color: transparent!important
+  
+}
+
+@media(max-width: 799px) {
+
+  .Card__hover {}
+
+  .Shift__item:nth-child(1) .Card:nth-child(even) .Card__hover,
+        .Shift__item:nth-child(2) .Card:nth-child(even) .Card__hover {
+    background-color: #1e1e1e
+  
+  }
+
+  .Shift__item:nth-child(1) .Card:nth-child(odd) .Card__hover,
+        .Shift__item:nth-child(2) .Card:nth-child(odd) .Card__hover {
+    background-color: #2F2F2F
+  
+  }
+  
+}
+
+@media   (min-width: 800px) {
+
+  .Card__hover {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5)
+  
+  }
+
+  .Card--work .Card__hover {
+    color: #ffffff
+  
+  }
+
+  .Card--split .Card__hover {
+    opacity: 1
+  
+  }
+  
+}
+
+.Card:hover .Card__hover {
+  opacity: 1
+  
+}
+
+.Card__desc {}
+
+@media(max-width: 799px) {
+
+  .Card__desc {
+    display: none
+  
+  }
+  
+}
+
+.Card__button {}
+
+@media(max-width: 799px) {
+
+  .Card__button {}
+
+  .Card--work .Card__button {
+    display: none
+  
+  }
+  
+}
+
+.Card:hover .Card__button {}
+
+.Card:hover .Card__button:after {
+  transform: translateX(0) translateZ(0)
+  
+}

@@ -1,0 +1,145 @@
+/*------------------------------------*\
+  #Global Variables
+\*------------------------------------*/
+
+/**
+ * Global Variables.
+ */
+
+:root {
+  
+  /* Base Spacing Units */
+  
+  /* Base Max Width */
+
+  /* Transition */
+
+  /* Font */ /* Light */
+
+  /* UI */
+
+  /* Type */
+  
+}
+
+/**
+ * Breakpoints.
+ */
+
+/*------------------------------------*\
+  #Team
+\*------------------------------------*/
+
+.Team {
+
+}
+
+.Team__grid {
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  -ms-flex-flow: row wrap;
+
+      flex-flow: row wrap
+  
+}
+
+.Team__itemText {
+
+}
+
+@media   (min-width: 992px) {
+
+  .Team__itemText {
+
+    -ms-flex: 1;
+
+        flex: 1;
+
+    -ms-flex-preferred-size: 66.66%;
+
+        flex-basis: 66.66%
+  
+  }
+  
+}
+
+@media   (min-width: 1200px) {
+
+  .Team__itemText {
+
+    -ms-flex-preferred-size: 50%;
+
+        flex-basis: 50%
+  
+  }
+  
+}
+
+.Team__itemMedia {
+
+  border: thin solid black;
+
+  -ms-flex: 1;
+
+      flex: 1;
+
+  -ms-flex-preferred-size: 50%;
+
+      flex-basis: 50%
+  
+}
+
+@media   (min-width: 992px) {
+
+  .Team__itemMedia {
+
+    -ms-flex-preferred-size: 33.33%;
+
+        flex-basis: 33.33%
+  
+  }
+  
+}
+
+@media   (min-width: 1200px) {
+
+  .Team__itemMedia {
+
+    -ms-flex-preferred-size: 25%;
+
+        flex-basis: 25%
+  
+  }
+  
+}
+
+.Team__content {
+
+  padding: 25px
+  
+}
+
+@media   (min-width: 800px) {
+
+  .Team__content {
+
+    padding: 40px
+  
+  }
+  
+}
+
+.Team__content p:last-child {
+
+  margin-bottom: 0
+  
+}
+
+.Team .media {
+
+  margin-bottom: 0
+  
+}

@@ -1,0 +1,105 @@
+/*------------------------------------*\
+  #Global Variables
+\*------------------------------------*/
+
+/**
+ * Global Variables.
+ */
+
+:root {
+  
+  /* Base Spacing Units */
+  
+  /* Base Max Width */
+
+  /* Transition */
+
+  /* Font */ /* Light */
+
+  /* UI */
+
+  /* Type */
+  
+}
+
+/**
+ * Breakpoints.
+ */
+
+/*------------------------------------*\
+  #Hero
+\*------------------------------------*/
+
+.Hero {
+  position: relative
+
+}
+
+.Hero__content {}
+
+@media   (min-width: 800px) {
+
+  .Hero__content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+    z-index: 1;
+    min-height: calc( 100vh - 130px );
+    color: #ffffff
+  
+  }
+  
+}
+
+.Hero__text {
+  width: 100%;
+  padding: 25px
+  
+}
+
+@media   (min-width: 800px) {
+
+  .Hero__text {
+    padding: 120px 40px
+  
+  }
+  
+}
+
+.Hero__bg {
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+  
+}
+
+@media   (min-width: 800px) {
+
+  .Hero__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0
+  
+  }
+
+  .Hero__bg:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1)
+  
+  }
+  
+}

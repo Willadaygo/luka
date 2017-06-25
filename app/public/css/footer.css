@@ -1,0 +1,234 @@
+/*------------------------------------*\
+  #Global Variables
+\*------------------------------------*/
+
+/**
+ * Global Variables.
+ */
+
+:root {
+  
+  /* Base Spacing Units */
+  
+  /* Base Max Width */
+
+  /* Transition */
+
+  /* Font */ /* Light */
+
+  /* UI */
+
+  /* Type */
+  
+}
+
+/**
+ * Breakpoints.
+ */
+
+/*------------------------------------*\
+  #Footer
+\*------------------------------------*/
+
+.Footer {
+
+  color: #ffffff;
+  background-color: #1e1e1e
+  
+}
+
+.Footer__wrapper {
+
+  position: relative;
+
+  min-height: calc(100vh - 70px);
+
+  padding-top: 40px;
+
+  padding-bottom: 40px
+  
+}
+
+.Footer__item:not(:last-child) {}
+
+@media   (min-width: 800px) {
+
+  .Footer__item:not(:last-child) {
+
+    padding-right: 40px
+  
+  }
+  
+}
+
+.Footer__intro {
+
+  max-width: 16em
+  
+}
+
+.Footer__title {
+
+  color: #666;
+
+  margin-bottom: 0
+  
+}
+
+p + .Footer__title {
+
+  margin-top: 40px
+  
+}
+
+.Footer__copy {
+
+  margin-bottom: 0
+  
+}
+
+.Footer__copy a {
+
+  color: #ffffff;
+
+  border-bottom-color: transparent;
+
+  transition: border .25s ease
+  
+}
+
+.Footer__copy a:hover {
+
+  color: #ffffff;
+
+  border-bottom-color: currentColor
+  
+}
+
+.Footer__form {
+
+  max-width: 17em;
+
+  margin-top: 25px
+  
+}
+
+.Footer__input {
+
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  outline: 0;
+
+  border: 0;
+
+  border-bottom: 1px solid #ffffff
+  
+}
+
+.Footer__input::-webkit-input-placeholder {
+
+  opacity: 1;
+
+  text-overflow: ellipsis;
+
+  color: #666;
+
+  transition: opacity .25s ease
+  
+}
+
+.Footer__input:-ms-input-placeholder {
+
+  opacity: 1;
+
+  text-overflow: ellipsis;
+
+  color: #666;
+
+  transition: opacity .25s ease
+  
+}
+
+.Footer__input::placeholder {
+
+  opacity: 1;
+
+  text-overflow: ellipsis;
+
+  color: #666;
+
+  transition: opacity .25s ease
+  
+}
+
+.Footer__input:focus::-webkit-input-placeholder {
+
+  opacity: 0
+  
+}
+
+.Footer__input:focus:-ms-input-placeholder {
+
+  opacity: 0
+  
+}
+
+.Footer__input:focus::placeholder {
+
+  opacity: 0
+  
+}
+
+.Footer__submit {
+
+  font-size: 15px;
+
+  line-height: 1;
+
+  font-weight: bold
+  
+}
+
+.Footer__submit:after {
+
+  content: '';
+
+  display: inline-block;
+
+  margin-left: .3125em;
+
+  position: relative;
+
+  top: 0em;
+
+  transition: inherit;
+
+  width: .933333333em;
+
+  height: .666666667em;
+
+  background-image: url(/imgs/link-arrow.svg);
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+  background-position: center
+  
+}
+
+.Footer__tag {
+
+  position: absolute;
+
+  bottom: 0;
+
+  font-size: 10px;
+
+  font-weight: 500
+  
+}
