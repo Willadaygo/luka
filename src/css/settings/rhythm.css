@@ -1,0 +1,16 @@
+/*------------------------------------*\
+  #Shared conisitent spacing
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6,
+.t-h1, .t-h2, .t-h3, .t-h4, .t-h5, .t-h6,
+blockquote, p, address,
+hr,
+table,
+legend,
+pre,
+.media {
+
+  margin-bottom: var(--bsu);
+  
+}

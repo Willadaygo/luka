@@ -1,0 +1,181 @@
+/*------------------------------------*\
+  #Typography
+\*------------------------------------*/
+
+/**
+ * Fonts.
+ */
+
+@font-face {
+  font-family: "Apercu";
+  src: url('/fonts/Apercu-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url('/fonts/Apercu-Medium.otf') format('opentype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+
+
+
+/**
+ * Headings.
+ */
+
+h1, .t-h1,
+h2, .t-h2,
+h3, .t-h3,
+h4, .t-h4,
+h5, .t-h5,
+h6, .t-h6 {
+  font-weight: bold;
+}
+
+h1, .t-h1 {
+  font-size: 45px;
+  line-height: 1;
+  letter-spacing: .025em;
+
+  @media(--xs) {
+    font-size: 90px;
+  }
+
+  @media(--sm) {
+    font-size: 120px;
+  }
+
+}
+
+h2, .t-h2 {
+  font-size: 15px;
+  line-height: calc(21/15);
+  letter-spacing: .025em;
+
+  @media(--xs) {
+    font-size: 30px;
+    line-height: calc(42/30);
+  }
+
+  @media(--sm) {
+    font-size: 40px;
+    line-height: calc(56/40);
+  }
+
+}
+
+
+
+
+
+/**
+ * Paragraphs.
+ */
+
+p, 
+address, 
+.t-para {
+  font-size: 15px;
+  line-height: calc(21/15);
+  font-weight: normal;
+  letter-spacing: .025em;
+  margin-bottom: 1em;
+
+  @media(--xs) {
+    font-size: 30px;
+    line-height: calc(42/30);
+  }
+
+  @media(--sm) {
+    font-size: 40px;
+    line-height: calc(56/40);
+  }
+
+  & a {
+    border-bottom: thin solid var(--blue);
+    transition: color var(--trans);
+
+    &:hover {
+      color: var(--blue);
+    }
+
+  }
+
+}
+
+
+/**
+ * Prose.
+ */
+
+hr {
+  border: 0;
+  border-bottom: thin solid white;
+  margin: var(--bsu) auto;
+}
+
+address, em {
+  font-style: normal;
+}
+
+small {
+  font-size: 70%;
+}
+
+strong, b {
+  font-weight: 500;
+}
+
+i {
+  font-style: normal;
+}
+
+sup {
+  font-size: 60%;
+  top: -.4em;
+}
+
+sub {
+  font-size: 60%;
+  bottom: 0;
+}
+
+
+
+/**
+ * Quote styling.
+ */
+
+q {
+  font-style: italic;
+  quotes: "‘" "’";
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+blockquote {
+  quotes: "“" "”";
+  & p {
+    position: relative;
+
+    &:first-of-type:before {
+      content: open-quote;
+      margin-right: .1em;
+    }
+    &:last-of-type:after {
+      content: close-quote;
+      margin-left: .1em;
+    }
+  }
+}

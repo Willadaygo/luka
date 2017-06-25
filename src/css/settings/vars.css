@@ -1,0 +1,91 @@
+/*------------------------------------*\
+  #Global Variables
+\*------------------------------------*/
+
+/**
+ * Global Variables.
+ */
+
+:root {
+  --white:  #ffffff;
+  --black:  #000000;
+
+  --pink:   #FFD7E2;
+  --blue:   #003596;
+
+  --grey: #d2d2d2;
+  --grey-light: #f0f0f0;
+  --grey-mid: #676767;
+  --grey-darkish: #2F2F2F;
+  --grey-dark: #1e1e1e;
+  
+  /* Base Spacing Units */
+  --bsu-sm:  10px;  
+  --bsu:     20px;    
+  --bsu-lg:  40px;
+  --bsu-xl:  60px;
+  --bsu-xxl: 120px;
+  
+  /* Base Max Width */
+
+  --bmw: 1600px;
+  --width: 100%;
+  --gutter: 40px;
+
+  /* Transition */
+  --speed: .25s;
+  --speed2: .5s;
+  --ease: ease;
+  --trans: .25s ease;
+  --trans-in: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --trans-out: cubic-bezier(0.4, 0.0, 1, 1);
+  --trans-inout: cubic-bezier(0.77, 0, 0.175, 1);
+  --trans-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Font */
+  --font: "Apercu", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Light */
+
+  /* UI */
+  --main-page-bg: var(--pink);
+  --main-page-color: var(--grey-dark);
+
+  --main-page-bg-selection: var(--blue);
+  --main-page-color-selection: var(--white);
+
+  --header-height-small: 60px;
+  --header-height-large: 70px;
+
+  /* Type */
+  --main-page-font: var(--font);
+  
+}
+
+
+
+
+
+/**
+ * Breakpoints.
+ */
+
+@custom-media --iphone only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait);
+
+@custom-media --xxs    (width >= 500px);
+@custom-media --xxsMax (width <= 499px);
+
+@custom-media --xs    (width >= 600px);
+@custom-media --xsMax (width <= 599px);
+
+@custom-media --sm    (width >= 800px);
+@custom-media --smMax (width <= 799px);
+
+@custom-media --md    (width >= 1000px);
+@custom-media --mdMax (width <= 999px); 
+
+@custom-media --lg    (width >= 1200px);
+@custom-media --lgMax (width <= 1199px); 
+
+@custom-media --bmw    (width >= 1600px);
+@custom-media --bmwMax (width <= 1599px); 
+
+@custom-media --xl   (width >= 2000px);

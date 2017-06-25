@@ -1,0 +1,74 @@
+{
+  "name": "luka",
+  "version": "1.0.0",
+  "description": "Luka agency website built by Will Russell (williamflrussell@gmail.com)",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "no-restricted-syntax": false,
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "semi": [
+        2,
+        "never"
+      ],
+      "no-console": 0
+    }
+  },
+  "dependencies": {
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.16.0",
+    "es6-promise": "^4.1.0",
+    "in-view": "^0.6.1",
+    "run-sequence": "^1.2.2",
+    "stickyfill": "^1.1.1",
+    "swiper": "^3.4.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.17.5",
+    "browserify": "^14.0.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-md5-plus": "^0.2.5",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-streamify": "^1.0.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-twig": "^0.7.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "postcss-calc": "^5.3.1",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-import": "^9.1.0",
+    "postcss-simple-vars": "^3.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "author": "Rotate°",
+  "license": "ISC"
+}

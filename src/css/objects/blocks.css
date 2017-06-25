@@ -1,0 +1,13 @@
+/*------------------------------------*\
+  #Blocks
+\*------------------------------------*/
+
+.block {
+  padding-top: var(--bsu-xl);
+  padding-bottom: calc( var(--bsu-xl) - var(--bsu) );
+
+  @media(--sm) {
+    padding-top: var(--bsu-xxl);
+    padding-bottom: calc( var(--bsu-xxl) - var(--bsu) );
+  }
+}

@@ -1,0 +1,184 @@
+@import "settings/vars";
+
+/*------------------------------------*\
+  #Header
+\*------------------------------------*/
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  &__inner {
+    position: relative;
+  }
+  
+  &__switch {
+    position: relative;
+    z-index: 20;
+    padding: calc(var(--bsu) - 5px) var(--bsu);
+
+    @media(--sm) {
+      padding: var(--bsu-lg);
+    }
+
+  }
+
+  &__cross {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg) translateZ(0);
+    backface-visibility: hidden;
+    transition: transform calc( var(--speed) * 2) var(--trans-inout);
+
+    @nest .Header.is-open & {
+      transform: rotate(45deg) translateZ(0);
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: currentColor;
+      outline: 1px solid transparent;
+      // transition: color var(--trans);
+    }
+    
+    &:before {
+      top: 9px;
+      width: 20px;
+      height: 2px;
+    }
+
+    &:after {
+      left: 9px;
+      width: 2px;
+      height: 20px;
+    }
+
+  }
+  
+  &__nav {
+    position: absolute;
+    top: var(--bsu);
+    left: 0;
+    right: 0;
+    margin: 0 -var(--bsu);
+    padding: var(--bsu-lg) 0;
+    width: auto;
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scale(1) translateZ(0);
+    transition: transform var(--trans), opacity var(--trans);
+    z-index: 10;
+
+    @media (width >= 470px) {
+      right: auto;
+    }
+
+    @media (--sm) {
+      top:  var(--bsu-lg);
+      left:  var(--bsu-lg);
+      margin: 0;
+      
+    }
+
+    @nest .Header.is-open & {
+      opacity: 1;
+      transform: scale(1) translateZ(0);
+    }
+    
+  }
+
+  &__list {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    color: var(--white);
+    opacity: 0;
+    transform: translate3d(0, -5px, 0);
+    transition: var(--trans);
+
+    @nest .Header.is-open & {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+
+      &:nth-child(1) {transition-delay: .25s;}
+      &:nth-child(2) {transition-delay: .3s;}
+      &:nth-child(3) {transition-delay: .35s;}
+      &:nth-child(4) {transition-delay: .4s;}
+      &:nth-child(5) {transition-delay: .45s;}
+      &:nth-child(6) {transition-delay: .5s;}
+  
+    }
+
+  }
+
+  &__link {
+    display: block;
+    font-size: 30px;
+    line-height: calc(42/30);
+    letter-spacing: .025em;
+    transform: translateX(0) translateZ(0);
+    backface-visibility: hidden;
+    transition: var(--trans);
+
+    &:hover {
+      transform: translateX(3px) translateZ(0);
+    }
+    
+    @media(--xs) {
+      font-size: 60px;
+    }
+
+    @media(--sm) {
+      font-size: 16px;
+      line-height: calc(22/16);
+    }
+    
+  }
+
+  &__top-right {
+    position: fixed;
+    top: var(--bsu-lg);
+    right: var(--bsu-lg);
+
+      
+    & .Header__logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg) translate(-100%, -100%);
+      transform-origin: 0 0;
+
+    }
+  }
+
+  &__bottom-right {
+    position: fixed;
+    bottom: var(--bsu-lg);
+    right: var(--bsu-lg);
+    width: 1em;
+    height: 1em;
+    background-color: var(--black);
+    border-radius: 50%;
+  }
+
+  &__bottom-left {
+    position: fixed;
+    bottom: var(--bsu-lg);
+    left: var(--bsu-lg);
+  }
+
+  &__logo {
+    margin-bottom: 0;
+  }
+
+}

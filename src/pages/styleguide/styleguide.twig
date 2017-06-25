@@ -1,0 +1,47 @@
+{% extends 'includes/layout.twig' %}
+
+{% block page %}
+
+  <section class="block">
+
+    <div class="wrapper">
+
+      <h1>Heading 1</h1>
+
+      <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit.</a> Voluptatibus culpa porro placeat, doloremque ex aliquid, dolorem ut animi veritatis fugit, corrupti laudantium obcaecati debitis praesentium doloribus voluptate officia minima. Dolorum!</p>
+
+      {% include 'includes/svg' with { 
+        class: 'i-social',
+        title: 'Social',
+        file: 'icon-twitter'
+      } %}
+
+      {% include 'includes/svg' with { 
+        class: 'i-social',
+        title: 'Social',
+        file: 'icon-instagram'
+      } %}
+
+      {% include 'includes/svg' with { 
+        class: 'i-social',
+        title: 'Social',
+        file: 'icon-facebook'
+      } %}
+      
+      {% include 'includes/svg' with { 
+        class: 'i-social',
+        title: 'Social',
+        file: 'icon-spotify'
+      } %}
+
+      {% include 'includes/svg' with { 
+        class: 'i-social',
+        title: 'Social',
+        file: 'icon-linkedin'
+      } %}
+
+    </div>
+
+  </section>
+      
+{% endblock %}
