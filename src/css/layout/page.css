@@ -19,7 +19,7 @@ html {
   line-height: 1.2;
   background-color: var(--pink);
   color: var(--black);
-  transition: background-color calc( var(--speed) * 4 ) var(--trans-in);
+  transition: background-color calc( var(--speed) * 2 ) var(--trans-inout);
 
   &.has-nav {
     background-color: var(--blue);
@@ -38,18 +38,6 @@ body {
     padding-top: var(--header-height-large);
   }
 
-  &__content {
-    margin-left: calc( 1/8 * 100% + 5px );
-    margin-right: calc( 1/8 * 100% + 5px );
-
-    @media(--sm) {
-      margin-left: 0;
-      margin-right: 0;
-      padding-right: calc(1/5 * 100%);
-    }
-
-  }
-  
 }
 
 ::selection {

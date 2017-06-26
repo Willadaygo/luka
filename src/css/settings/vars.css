@@ -10,7 +10,7 @@
   --white:  #ffffff;
   --black:  #000000;
 
-  --pink:   #FEDCE6;
+  --pink:   #ffdbd7;
   --blue:   #0E4AA4;
 
   --grey: #d2d2d2;
@@ -50,8 +50,8 @@
   --main-page-bg-selection: var(--blue);
   --main-page-color-selection: var(--white);
 
-  --header-height-small: 60px;
-  --header-height-large: 70px;
+  --header-height-small: 70px;
+  --header-height-large: var(--bsu-lg);
 
   /* Type */
   --main-page-font: var(--font);

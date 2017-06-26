@@ -1,0 +1,35 @@
+@import "settings/vars";
+
+/*------------------------------------*\
+  #Content
+\*------------------------------------*/
+
+.Content {
+
+  margin-left: calc( 1/8 * 100% + 5px );
+  margin-right: calc( 1/8 * 100% + 5px );
+
+  @media(--sm) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: calc(1/5 * 100%);
+  }
+
+  &__item {
+    padding-top: var(--bsu);
+    margin-top: -var(--bsu);
+    padding-bottom: var(--bsu-lg);
+
+    @media(--sm) {
+      padding-top: var(--bsu-lg);
+      margin-top: -var(--bsu-lg);
+    }
+    
+  }
+
+  &__title {
+    display: inline-block;
+    border-bottom: .15em solid black;
+  }
+
+}

@@ -11,6 +11,10 @@
   width: 100%;
   z-index: 10;
 
+  @media(--sm) {
+    width: auto;
+  }
+
   &__inner {
     position: relative;
   }
@@ -27,9 +31,10 @@
   }
 
   &__cross {
-    $size: 30px;
-    $height: 4px;
+    $size: 1em;
+    $width: .133333333em;
 
+    font-size: 16px;
     display: block;
     position: relative;
     width: $size;
@@ -37,6 +42,10 @@
     transform: rotate(0deg) translateZ(0);
     backface-visibility: hidden;
     transition: transform calc( var(--speed) * 2) var(--trans-inout);
+
+    @media(--xs) {
+      font-size: 30px;
+    }
 
     @nest .Header.is-open & {
       transform: rotate(45deg) translateZ(0);
@@ -57,13 +66,13 @@
       top: 50%;
       transform: translateY(-50%);
       width: $size;
-      height: $height;
+      height: $width;
     }
 
     &:after {
       left: 50%;
       transform: translateX(-50%);
-      width: $height;
+      width: $width;
       height: $size;
     }
 
@@ -73,29 +82,49 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    padding: var(--bsu-lg) 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--blue);
+    
     opacity: 0;
-    transform-origin: 0 0;
-    transform: scale(1) translateZ(0);
-    transition: transform var(--trans), opacity var(--trans);
+    visibility: hidden;
+    transform: translateZ(0);
+    transition: 
+      opacity var(--trans), 
+      visibility var(--trans);
     z-index: 10;
 
     @media (--sm) {
-      width: auto;
-      height: auto;
-      background-color: transparent;
-      top: var(--bsu-lg);
+      margin: var(--bsu-lg) 0;
+      top: var(--bsu-xl);
       left: var(--bsu-lg);
+      z-index: 20;
+    }
+
+    @media (--smMax) {
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--blue);
       
     }
 
     @nest .Header.is-open & {
       opacity: 1;
-      transform: scale(1) translateZ(0);
+      visibility: visible;
+    }
+    
+  }
+
+  &__scroll {
+
+    @media(--smMax) {
+      padding-top: var(--bsu-xl);
+      padding-bottom: var(--bsu-xl);
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
     }
     
   }
@@ -108,16 +137,20 @@
     color: var(--white);
     opacity: 0;
     visibility: hidden;
-    transform: translate3d(0, -5px, 0);
+    transform: translateX(-10px) translateZ(0);
     transition: 
-      opacity var(--trans),
-      visibility var(--trans);
-
+      opacity calc( var(--speed) * 2 ) var(--trans-bounce),
+      visibility calc( var(--speed) * 2 ) var(--trans-bounce),
+      transform calc( var(--speed) * 2 ) var(--trans-bounce) .25s;
 
     @nest .Header.is-open & {
       opacity: 1;
       visibility: visible;
-      transform: translate3d(0, 0, 0);
+      transform: translateX(0) translateZ(0);
+      transition: 
+      opacity calc( var(--speed) * 2 ) var(--trans-bounce),
+      visibility calc( var(--speed) * 2 ) var(--trans-bounce),
+      transform calc( var(--speed) * 2 ) var(--trans-bounce);
 
       &:nth-child(1) {transition-delay: .25s;}
       &:nth-child(2) {transition-delay: .3s;}
@@ -132,12 +165,14 @@
 
   &__link {
     display: block;
-    transform: translateX(0) translateZ(0);
-    backface-visibility: hidden;
-    transition: var(--trans);
+    padding: .5em 0;
 
-    &:hover {
-      transform: translateX(3px) translateZ(0);
+    @media(--xs) {
+      padding: 2vh 0;
+    }
+
+    @media(--sm) {
+      padding: 1em 0;
     }
     
   }
@@ -146,6 +181,7 @@
     position: fixed;
     top: var(--bsu);
     right: var(--bsu); 
+    z-index: 20;
 
     @media(--sm) {
       top: var(--bsu-lg);
@@ -175,7 +211,8 @@
 
     position: fixed;
     bottom: var(--bsu);
-    right: var(--bsu); 
+    right: var(--bsu);
+    z-index: 20;
 
     @media(--sm) {
       bottom: var(--bsu-lg);
@@ -186,7 +223,8 @@
   &__bottom-left {
     position: fixed;
     bottom: var(--bsu);
-    left: var(--bsu); 
+    left: var(--bsu);
+    z-index: 20;
 
     @media(--sm) {
       bottom: var(--bsu-lg);

@@ -15,12 +15,12 @@ const _ = {
   wScrollDiff: 0,
 }
 
-const openHeader = () => {
+export const openHeader = () => {
   _.header.classList.add('is-open')
   _.html.classList.add('has-nav')
 }
 
-const closeHeader = () => {
+export const closeHeader = () => {
   _.header.classList.remove('is-open')
   _.html.classList.remove('has-nav')
 }

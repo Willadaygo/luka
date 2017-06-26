@@ -35,6 +35,7 @@
     "babel-polyfill": "^6.16.0",
     "es6-promise": "^4.1.0",
     "in-view": "^0.6.1",
+    "jump.js": "^1.0.2",
     "run-sequence": "^1.2.2",
     "stickyfill": "^1.1.1",
     "swiper": "^3.4.1"

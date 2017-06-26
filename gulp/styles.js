@@ -18,14 +18,22 @@ export default ($, production) => (
           browsers: ['last 2 versions'],
         }),
       ]))
+      // .pipe(production ? $.cssnano({
+      //   zindex: false,
+      //   autoprefixer: false,
+      // }) : $.util.noop())
+      // .pipe($.rename((path) => {
+      //   path.dirname = ''
+      // }))
+      // .pipe(production ? $.md5Plus(10, './app/craft/templates/modules/**/*.twig') : $.util.noop())
+      // .pipe(gulp.dest('app/public/css'))
+      // .pipe($.browserSync.stream())
+      .pipe($.concatCss('modules.css'))
       .pipe(production ? $.cssnano({
         zindex: false,
         autoprefixer: false,
       }) : $.util.noop())
-      .pipe($.rename((path) => {
-        path.dirname = ''
-      }))
-      .pipe(production ? $.md5Plus(10, './app/craft/templates/modules/**/*.twig') : $.util.noop())
+      .pipe(production ? $.md5Plus(10, './app/craft/templates/includes/layout.twig') : $.util.noop())
       .pipe(gulp.dest('app/public/css'))
       .pipe($.browserSync.stream())
   }
