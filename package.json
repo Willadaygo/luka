@@ -4,7 +4,11 @@
   "description": "Luka agency website built by Will Russell (williamflrussell@gmail.com)",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "pushData": "./scripts.sh pushData",
+    "pullData": "./scripts.sh pullData",
+    "pushAssets": "./scripts.sh pushAssets",
+    "pullAssets": "./scripts.sh pullAssets"
   },
   "babel": {
     "presets": [

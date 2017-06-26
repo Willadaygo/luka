@@ -1,1 +1,8 @@
 node_modules
+app/craft/storage/*
+app/craft/templates/*
+app/public/uploads
+app/public/css
+app/public/imgs
+app/public/fonts
+app/public/js

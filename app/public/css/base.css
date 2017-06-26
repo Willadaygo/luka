@@ -702,7 +702,7 @@ legend,
 pre,
 .media {
 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   
 }
 
@@ -744,32 +744,39 @@ h6, .t-h6 {
 h1, .t-h1 {
   font-size: 45px;
   line-height: 1;
-  letter-spacing: .025em
+  letter-spacing: .02em
 
 }
 
-@media   (min-width: 600px) {
+@media   (min-width: 500px) {
 
   h1, .t-h1 {
-    font-size: 90px;
+    font-size: 100px;
   }
   }
 
 @media   (min-width: 800px) {
 
   h1, .t-h1 {
-    font-size: 120px;
+    font-size: 80px;
+  }
+  }
+
+@media   (min-width: 1000px) {
+
+  h1, .t-h1 {
+    font-size: 105px;
   }
   }
 
 h2, .t-h2 {
   font-size: 15px;
   line-height: 1.4;
-  letter-spacing: .025em
+  letter-spacing: .02em
 
 }
 
-@media   (min-width: 600px) {
+@media   (min-width: 500px) {
 
   h2, .t-h2 {
     font-size: 30px;
@@ -781,6 +788,36 @@ h2, .t-h2 {
 
   h2, .t-h2 {
     font-size: 40px;
+    line-height: 1.4;
+  }
+  }
+
+h3, .t-h3 {
+  font-size: 30px;
+  line-height: 1.4;
+  letter-spacing: .02em
+
+}
+
+@media   (min-width: 500px) {
+
+  h3, .t-h3 {
+    font-size: 60px;
+  }
+  }
+
+@media   (min-width: 800px) {
+
+  h3, .t-h3 {
+    font-size: 17px;
+    line-height: 1.41176;
+  }
+  }
+
+@media   (min-width: 1000px) {
+
+  h3, .t-h3 {
+    font-size: 20px;
     line-height: 1.4;
   }
   }
@@ -795,12 +832,12 @@ address,
   font-size: 15px;
   line-height: 1.4;
   font-weight: normal;
-  letter-spacing: .025em;
+  letter-spacing: .02em;
   margin-bottom: 1em
 
 }
 
-@media   (min-width: 600px) {
+@media   (min-width: 500px) {
 
   p, 
 address, 
@@ -815,18 +852,28 @@ address,
   p, 
 address, 
 .t-para {
+    font-size: 34px;
+    line-height: 1.41176;
+  }
+  }
+
+@media   (min-width: 1000px) {
+
+  p, 
+address, 
+.t-para {
     font-size: 40px;
     line-height: 1.4;
   }
   }
 
 p a, address a, .t-para a {
-  border-bottom: thin solid #003596;
+  border-bottom: thin solid #0E4AA4;
   transition: color .25s ease;
 }
 
 p a:hover, address a:hover, .t-para a:hover {
-  color: #003596;
+  color: #0E4AA4;
 }
 
 /**
@@ -836,7 +883,7 @@ p a:hover, address a:hover, .t-para a:hover {
 hr {
   border: 0;
   border-bottom: thin solid white;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 address, em {
@@ -925,8 +972,13 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-size: 1em;
   line-height: 1.2;
-  background: #FFD7E2;
-  color: #1e1e1e;
+  background-color: #FEDCE6;
+  color: #000000;
+  transition: background-color 1s cubic-bezier(0.0, 0.0, 0.2, 1)
+}
+
+html.has-nav {
+  background-color: #0E4AA4;
 }
 
 body {
@@ -935,24 +987,8 @@ body {
 }
 
 .Main {
-  padding-top: 60px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 
-    [full-start] minmax(40px, 2fr) 
-    [main-start] minmax(0, 40em) 
-    [main-end] minmax(40px, 1fr) 
-    [full-end];
-      grid-template-columns: 
-    [full-start] minmax(40px, 2fr) 
-    [main-start] minmax(0, 40em) 
-    [main-end] minmax(40px, 1fr) 
-    [full-end]
-}
-
-.Main__content {
-  -ms-grid-column: main;
-      grid-column: main;
+  padding-top: 60px
+  
 }
 
 @media   (min-width: 800px) {
@@ -962,13 +998,27 @@ body {
   }
   }
 
+.Main__content {
+  margin-left: calc( 1/8 * 100% + 5px );
+  margin-right: calc( 1/8 * 100% + 5px );
+}
+
+@media   (min-width: 800px) {
+
+  .Main__content {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 20%;
+  }
+}
+
 ::-moz-selection {
-  background: #003596;
+  background: #0E4AA4;
   color: #ffffff;
 }
 
 ::selection {
-  background: #003596;
+  background: #0E4AA4;
   color: #ffffff;
 }
 
@@ -1006,12 +1056,23 @@ body {
 .grid--rigid {
   -ms-flex-pack: start;
       justify-content: flex-start;
-  margin-left: -40px
+  margin-left: -30px
 }
 
 .grid--rigid > .grid__item {
-  padding-left: 40px;
+  padding-left: 30px;
 }
+
+@media   (min-width: 800px) {
+
+  .grid--rigid {
+    margin-left: -40px;
+  }
+
+  .grid--rigid > .grid__item {
+    padding-left: 40px;
+  }
+  }
 
 .grid--left {
   -ms-flex-pack: start;
@@ -1048,7 +1109,11 @@ body {
  */
 
 @media    (min-width: 800px) {
-  .u-2\/3\@sm { width: 66.66667%; }
+  .u-5\/7\@sm { width: 71.42857%; }
+}
+
+@media    (min-width: 1000px) {
+  .u-5\/8\@md { width: 62.5%; }
 }
 
 @media    (min-width: 1200px) {
@@ -1074,11 +1139,8 @@ body {
 \*------------------------------------*/
 
 .wrapper {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px
+  padding-left: 30px;
+  padding-right: 30px
   
 }
 
@@ -1096,14 +1158,14 @@ body {
 
 .block {
   padding-top: 60px;
-  padding-bottom: 40px
+  padding-bottom: 30px
 }
 
 @media   (min-width: 800px) {
 
   .block {
     padding-top: 120px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
   }
   }
 

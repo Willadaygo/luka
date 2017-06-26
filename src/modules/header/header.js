@@ -3,6 +3,7 @@
 const _ = {
   header: document.querySelector('.Header'),
   switch: document.querySelector('.Header__switch'),
+  html: document.querySelector('html'),
   navLinks: document.querySelectorAll('.Header__link'),
   nav: document.querySelector('.Header__list'),
   highlight: document.querySelector('.Header__highlight'),
@@ -16,10 +17,12 @@ const _ = {
 
 const openHeader = () => {
   _.header.classList.add('is-open')
+  _.html.classList.add('has-nav')
 }
 
 const closeHeader = () => {
   _.header.classList.remove('is-open')
+  _.html.classList.remove('has-nav')
 }
 
 const toggleHeader = () => {

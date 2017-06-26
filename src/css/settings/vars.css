@@ -10,8 +10,8 @@
   --white:  #ffffff;
   --black:  #000000;
 
-  --pink:   #FFD7E2;
-  --blue:   #003596;
+  --pink:   #FEDCE6;
+  --blue:   #0E4AA4;
 
   --grey: #d2d2d2;
   --grey-light: #f0f0f0;
@@ -21,7 +21,7 @@
   
   /* Base Spacing Units */
   --bsu-sm:  10px;  
-  --bsu:     20px;    
+  --bsu:     30px;    
   --bsu-lg:  40px;
   --bsu-xl:  60px;
   --bsu-xxl: 120px;
@@ -46,8 +46,6 @@
   --font: "Apercu", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Light */
 
   /* UI */
-  --main-page-bg: var(--pink);
-  --main-page-color: var(--grey-dark);
 
   --main-page-bg-selection: var(--blue);
   --main-page-color-selection: var(--white);
@@ -70,11 +68,8 @@
 
 @custom-media --iphone only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait);
 
-@custom-media --xxs    (width >= 500px);
-@custom-media --xxsMax (width <= 499px);
-
-@custom-media --xs    (width >= 600px);
-@custom-media --xsMax (width <= 599px);
+@custom-media --xs    (width >= 500px);
+@custom-media --xsMax (width <= 499px);
 
 @custom-media --sm    (width >= 800px);
 @custom-media --smMax (width <= 799px);

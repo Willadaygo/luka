@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="/css/guide.css" type="text/css"><script> </script>
 
-<input type="checkbox" class="guide-toggle">
-<div class="guide">
-  <div class="guide__grid  grid">
-    {% for i in 1..20 %}
-      <div class="guide__item  grid__item  u-1/20">
+<input type="checkbox" class="guide-toggle" checked>
+<div class="guide  wrapper">
+  <div class="guide__grid  grid  grid--rigid">
+    {% for i in 1..8 %}
+      <div class="guide__item  grid__item  u-1/8">
         <div class="guide__unit"></div>
       </div> 
     {% endfor %}

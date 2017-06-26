@@ -27,15 +27,23 @@
 /**
  * Modifiers
  */
-
-$gutter: var(--bsu-lg);
+$gutter-sm: var(--bsu);
+$gutter-lg: var(--bsu-lg);
 
 .grid--rigid {
   justify-content: flex-start;
-  margin-left: -$gutter;
+  margin-left: -$gutter-sm;
 
   & > .grid__item {
-    padding-left: $gutter;
+    padding-left: $gutter-sm;
+  }
+
+  @media(--sm) {
+    margin-left: -$gutter-lg;
+
+    & > .grid__item {
+      padding-left: $gutter-lg;
+    }
   }
 }
   
@@ -70,7 +78,11 @@ $gutter: var(--bsu-lg);
  */
 
 @media (--sm) {
-  .u-2\/3\@sm { width: calc(2/3 * 100%); }
+  .u-5\/7\@sm { width: calc(5/7 * 100%); }
+}
+
+@media (--md) {
+  .u-5\/8\@md { width: calc(5/8 * 100%); }
 }
 
 @media (--lg) {
