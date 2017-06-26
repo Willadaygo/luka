@@ -876,7 +876,7 @@ address,
   }
 
 p a, address a, .t-para a {
-  border-bottom: thin solid #0E4AA4;
+  border-bottom: thin solid currentColor;
   transition: color .25s ease;
 }
 

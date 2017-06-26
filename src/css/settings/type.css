@@ -132,7 +132,7 @@ address,
   }
 
   & a {
-    border-bottom: thin solid var(--blue);
+    border-bottom: thin solid currentColor;
     transition: color var(--trans);
 
     &:hover {
