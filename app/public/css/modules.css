@@ -70,13 +70,14 @@
 .Content__item {
   padding-top: 20px;
   margin-top: -20px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 @media (min-width: 500px) {
   .Content__item {
     padding-top: 30px;
     margin-top: -30px;
+    padding-bottom: 120px;
   }
 }
 

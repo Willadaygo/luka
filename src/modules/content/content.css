@@ -20,11 +20,12 @@
   &__item {
     padding-top: var(--bsu-sm);
     margin-top: -var(--bsu-sm);
-    padding-bottom: var(--bsu-lg);
+    padding-bottom: var(--bsu-xl);
 
     @media(--xs) {
       padding-top: var(--bsu);
       margin-top: -var(--bsu);
+      padding-bottom: var(--bsu-xxl);
     }
 
     @media(--sm) {
