@@ -9,14 +9,22 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   z-index: 10;
 
   @media(--sm) {
     width: auto;
+    height: auto;
   }
 
   &__inner {
     position: relative;
+    height: 100%;
+    
+    @media(--sm) {
+      height: auto;
+    }
+
   }
   
   &__switch {
@@ -107,7 +115,7 @@
       right: 0;
       bottom: 0;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
@@ -127,7 +135,7 @@
     @media(--smMax) {
       padding-top: var(--bsu-xl);
       padding-bottom: var(--bsu-xl);
-      overflow-y: scroll;
+      overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
     
