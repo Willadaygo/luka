@@ -5,9 +5,11 @@
 \*------------------------------------*/
 
 .Content {
+  counter-reset: section;
 
-  margin-left: calc( 1/8 * 100% + 5px );
-  margin-right: calc( 1/8 * 100% + 5px );
+  & p {
+    max-width: 21em;
+  }
 
   @media(--sm) {
     margin-left: 0;
@@ -16,9 +18,14 @@
   }
 
   &__item {
-    padding-top: var(--bsu);
-    margin-top: -var(--bsu);
+    padding-top: var(--bsu-sm);
+    margin-top: -var(--bsu-sm);
     padding-bottom: var(--bsu-lg);
+
+    @media(--xs) {
+      padding-top: var(--bsu);
+      margin-top: -var(--bsu);
+    }
 
     @media(--sm) {
       padding-top: var(--bsu-lg);
@@ -28,18 +35,39 @@
   }
 
   &__title {
+    position: relative;
     display: inline-block;
     border-bottom: .15em solid black;
+
+    @media(--sm) {
+
+      &:before {
+        counter-increment: section;
+        content: counter(section) ".";
+        position: absolute;
+        top: .25em;
+        right: calc( 100% + var(--bsu-lg) );
+        font-size: 70%;
+      }
+
+    }
+
   }
 
-  & ul {
+  &__listTitle {
+    margin-bottom: 10px;
+  }
+
+  &__list {
     position: relative;
     padding-left: 1.1em;
     margin-bottom: var(--bsu);
+    font-weight: normal;
+    text-transform: lowercase;
   }
 
   & li {
-
+    
     &:before {
       content: '\2014';
       position: absolute;

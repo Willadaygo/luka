@@ -22,7 +22,11 @@
   &__switch {
     position: relative;
     z-index: 20;
-    padding: var(--bsu);
+    padding: var(--bsu-sm);
+
+    @media(--xs) {
+      padding: var(--bsu);
+    }
 
     @media(--sm) {
       padding: var(--bsu-lg);
@@ -34,7 +38,7 @@
     $size: 1em;
     $width: .133333333em;
 
-    font-size: 16px;
+    font-size: 22px;
     display: block;
     position: relative;
     width: $size;
@@ -59,7 +63,6 @@
       left: 0;
       background-color: currentColor;
       outline: 1px solid transparent;
-      // transition: color var(--trans);
     }
     
     &:before {
@@ -79,8 +82,8 @@
   }
   
   &__nav {
-
     $trans: calc( var(--speed) * 2 ) var(--trans-inout);
+    
     position: absolute;
     top: 0;
     left: 0;
@@ -110,7 +113,6 @@
       justify-content: center;
       text-align: center;
       background-color: var(--blue);
-      
     }
 
     @nest .Header.is-open & {
@@ -137,6 +139,7 @@
     @media(--smMax) {
       overflow: hidden;
     }
+
   }
 
   &__item {
@@ -154,9 +157,9 @@
       visibility: visible;
       transform: translateX(0) translateZ(0);
       transition: 
-      opacity calc( var(--speed) * 2 ) var(--trans-bounce),
-      visibility calc( var(--speed) * 2 ) var(--trans-bounce),
-      transform calc( var(--speed) * 2 ) var(--trans-bounce);
+        opacity calc( var(--speed) * 2 ) var(--trans-bounce),
+        visibility calc( var(--speed) * 2 ) var(--trans-bounce),
+        transform calc( var(--speed) * 2 ) var(--trans-bounce);
 
       &:nth-child(1) {transition-delay: .25s;}
       &:nth-child(2) {transition-delay: .3s;}
@@ -170,24 +173,115 @@
   }
 
   &__link {
-    display: block;
+    position: relative;
+    display: inline-block;
     padding: .5em 0;
+    transition: color var(--speed) var(--trans-inout);
 
+    &:hover {
+      color: var(--black);
+    }
+    
     @media(--xs) {
       padding: 2vh 0;
     }
 
     @media(--sm) {
-      padding: 1em 0;
+      overflow: hidden;
+      padding: .5em 0;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: .35em;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: .15em;
+        background-color: var(--black);
+        transform: translateX(-101%) translateZ(0);
+        backface-visibility: hidden;
+        transition: var(--speed) var(--trans-inout);
+      }
+
+      @nest .Header__list:hover & {
+        color: var(--white);
+
+        &:after {
+          transform: translateX(-101%) translateZ(0);
+        }
+
+        &:hover {
+          color: var(--black);
+
+          &:after {
+            transform: translateX(0%) translateZ(0);
+          }
+
+        }
+
+      }
+
+      &.is-active {
+        color: var(--black);
+
+        &:after {
+          transform: translateX(0%) translateZ(0);
+        }
+
+      }
+
     }
     
   }
 
+  &__email,
+  &__instagram {
+    display: inline-block;
+
+    &:first-child {
+
+      &:after {
+        content: '';
+        display: inline-block;
+        margin-bottom: .25em;
+        margin-right: .5em;
+        margin-left: .5em;
+        width: var(--bsu-lg);
+        height: 1px;
+        background-color: currentColor;
+      }
+
+    }
+
+  }
+
+  &__top-mid {
+    display: none;
+
+    @media(--sm) {
+      display: block;
+      position: fixed;
+      top: var(--bsu-lg);
+      left: calc( ( (100vw / 8) * 4) + 20px);
+      z-index: 20;
+    }
+
+    @media(--md) {
+      left: calc( ( (100vw / 8) * 5) + 15px); 
+    }
+  }
+
   &__top-right {
     position: fixed;
-    top: var(--bsu);
-    right: var(--bsu); 
+    top: var(--bsu-sm);
+    right: var(--bsu-sm); 
     z-index: 20;
+
+    @media(--xs) {
+      top: var(--bsu);
+      right: var(--bsu); 
+    }
 
     @media(--sm) {
       top: var(--bsu-lg);
@@ -216,9 +310,14 @@
     margin-bottom: 0;
 
     position: fixed;
-    bottom: var(--bsu);
-    right: var(--bsu);
+    bottom: var(--bsu-sm);
+    right: var(--bsu-sm);
     z-index: 20;
+
+    @media(--xs) {
+      bottom: var(--bsu);
+      right: var(--bsu);
+    }
 
     @media(--sm) {
       bottom: var(--bsu-lg);
@@ -228,9 +327,14 @@
 
   &__bottom-left {
     position: fixed;
-    bottom: var(--bsu);
-    left: var(--bsu);
+    bottom: var(--bsu-sm);
+    left: var(--bsu-sm);
     z-index: 20;
+
+    @media(--xs) {
+      bottom: var(--bsu);
+      left: var(--bsu);
+    }
 
     @media(--sm) {
       bottom: var(--bsu-lg);
@@ -241,6 +345,7 @@
       margin-bottom: -.15em;
       margin-left: -.08em;
     }
+
   }
 
   &__logo {
@@ -250,7 +355,9 @@
       & span {
         display: none;
       }
+
     }
+
   }
 
 }

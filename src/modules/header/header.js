@@ -4,15 +4,7 @@ const _ = {
   header: document.querySelector('.Header'),
   switch: document.querySelector('.Header__switch'),
   html: document.querySelector('html'),
-  navLinks: document.querySelectorAll('.Header__link'),
-  nav: document.querySelector('.Header__list'),
-  highlight: document.querySelector('.Header__highlight'),
-  elHeight: 0,
-  dHeight: 0,
-  wHeight: 0,
-  wScrollCurrent: 0,
-  wScrollBefore: 0,
-  wScrollDiff: 0,
+  links: document.querySelectorAll('.Header__link'),
 }
 
 export const openHeader = () => {
@@ -32,58 +24,31 @@ const toggleHeader = () => {
     openHeader()
   }
 }
-// const stickyHeader = () => {
-//   _.elHeight = _.header.offsetHeight
-//   _.dHeight = document.body.offsetHeight
-//   _.wHeight = window.innerHeight
-//   _.wScrollCurrent = window.pageYOffset
-//   _.wScrollDiff = _.wScrollBefore - _.wScrollCurrent
 
-//   if (_.wScrollCurrent <= _.elHeight) { // TOP OF THE PAGE
-//     _.header.classList.remove('is-scrolled')
-//   } else if (_.wScrollDiff > 0) { // SCROLL UP
-//     _.header.classList.remove('is-scrolled')
+// inView.threshold(0)
 
-//     if ((_.wScrollCurrent + _.wHeight) <= (_.dHeight - _.elHeight)) { // AT BOTTOM
-//       _.header.classList.remove('is-dark')
-//     }
-//   } else if (_.wScrollDiff < _.elHeight) { // SCROLL DOWN
-//     if ((_.wScrollCurrent + _.wHeight) >= (_.dHeight - _.elHeight)) { // AT BOTTOM
-//       _.header.classList.remove('is-scrolled')
-//       _.header.classList.add('is-dark')
+// const checkState = () => {
+//   const items = Array.from(_.links)
+
+//   let count = 0
+//   items.forEach((item, i) => {
+//     const el = document.querySelector(item.getAttribute('href'))
+//     if (inView.is(el)) {
+//       item.classList.add('is-active')
+//       count++
+//       if (count === 2) {
+//         console.log(i)
+//         items[count - 1].classList.remove('is-active')
+//       }
 //     } else {
-//       _.header.classList.add('is-scrolled')
-//       _.header.classList.remove('is-dark')
+//       item.classList.remove('is-active')
 //     }
-//   }
-
-//   _.wScrollBefore = _.wScrollCurrent
+//   })
 // }
 
-// const revealOnLoad = () => {
-//   _.header.classList.remove('is-hidden')
-// }
-
-// function isHighlighted(event, navLink) {
-//   let width
-//   let left
-
-//   if (navLink) {
-//     width = navLink.querySelector('span').getBoundingClientRect().width
-//     left = navLink.getBoundingClientRect().left - _.nav.getBoundingClientRect().left
-//   } else {
-//     width = this.querySelector('span').getBoundingClientRect().width
-//     left = this.getBoundingClientRect().left - _.nav.getBoundingClientRect().left
-//   }
-
-//   _.highlight.style = `
-//     width: ${width}px;
-//     transform: translateX(${left}px) translateZ(0);
-//   `
-// }
 
 const init = () => {
-  // Array.from(_.navLinks).forEach((navLink) => {
+  // Array.from(_.links).forEach((navLink) => {
   //   if (navLink.classList.contains('is-active')) {
   //     const isActive = navLink
   //     isHighlighted(event, isActive)
@@ -91,12 +56,17 @@ const init = () => {
   //   navLink.addEventListener('mouseenter', isHighlighted)
   // })
 
-  // if (_.header) window.addEventListener('scroll.throttled', stickyHeader)
-
   if (_.switch) _.switch.addEventListener('click', toggleHeader)
+
+  // if (_.links.length) {
+  //   checkState()
+  // }
+
+  // window.addEventListener('scroll', () => {
+  //   checkState()
+  // })
 }
 
 export default {
   init,
-  // revealOnLoad,
 }

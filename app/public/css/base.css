@@ -716,14 +716,16 @@ pre,
 
 @font-face {
   font-family: "Apercu";
-  src: url('/fonts/Apercu-Regular.otf') format('opentype');
+  src: url('/fonts/apercu-regular.woff2') format('woff2'),
+       url('/fonts/apercu-regular.woff') format('woff');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Apercu";
-  src: url('/fonts/Apercu-Medium.otf') format('opentype');
+  src: url('/fonts/apercu-medium.woff2') format('woff2'),
+       url('/fonts/apercu-medium.woff') format('woff');
   font-style: normal;
   font-weight: bold;
 }
@@ -830,9 +832,22 @@ h3, .t-h3 {
   }
   }
 
-h4 {
+h4, .t-h4 {
   margin-bottom: 0;
 }
+
+h5, .t-h5 {
+  font-size: 12px;
+  line-height: 1.85714;
+  letter-spacing: .02em
+}
+
+@media   (min-width: 1000px) {
+
+  h5, .t-h5 {
+    font-size: 14px;
+  }
+  }
 
 /**
  * Paragraphs.
@@ -880,12 +895,20 @@ address,
   }
 
 p a, address a, .t-para a {
-  border-bottom: thin solid currentColor;
+  border-bottom: .1em solid currentColor;
   transition: color .25s ease;
 }
 
 p a:hover, address a:hover, .t-para a:hover {
   color: #0E4AA4;
+}
+
+.has-nav p a, .has-nav address a, .has-nav .t-para a {
+
+}
+
+.has-nav p a:hover, .has-nav address a:hover, .has-nav .t-para a:hover {
+  color: #ffffff;
 }
 
 /**
@@ -1116,6 +1139,8 @@ body {
  */
 
 @media    (min-width: 800px) {
+  .u-1\/2\@sm { width: 50%; }
+
   .u-5\/7\@sm { width: 71.42857%; }
 }
 
@@ -1146,10 +1171,18 @@ body {
 \*------------------------------------*/
 
 .wrapper {
-  padding-left: 30px;
-  padding-right: 30px
+  padding-left: 60px;
+  padding-right: 60px
   
 }
+
+@media   (min-width: 500px) {
+
+  .wrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  }
 
 @media   (min-width: 800px) {
 

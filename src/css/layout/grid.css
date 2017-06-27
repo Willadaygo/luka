@@ -78,6 +78,8 @@ $gutter-lg: var(--bsu-lg);
  */
 
 @media (--sm) {
+  .u-1\/2\@sm { width: calc(1/2 * 100%); }
+
   .u-5\/7\@sm { width: calc(5/7 * 100%); }
 }
 

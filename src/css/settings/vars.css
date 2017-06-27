@@ -13,14 +13,10 @@
   --pink:   #ffdbd7;
   --blue:   #0E4AA4;
 
-  --grey: #d2d2d2;
-  --grey-light: #f0f0f0;
-  --grey-mid: #676767;
-  --grey-darkish: #2F2F2F;
-  --grey-dark: #1e1e1e;
+  --grey: #aaa;
   
   /* Base Spacing Units */
-  --bsu-sm:  10px;  
+  --bsu-sm:  20px;  
   --bsu:     30px;    
   --bsu-lg:  40px;
   --bsu-xl:  60px;

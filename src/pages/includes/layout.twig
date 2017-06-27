@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
   {% include 'includes/favicons' %}
   {% if page is defined %}
-    <title>Luka - {{ page }}</title>
+    <title>Luka Agency - {{ page }}</title>
   {% else %}
-    <title>Luka</title>
+    <title>Luka Agency</title>
   {% endif %}
   <link rel="stylesheet" href="/css/base.css" type="text/css">
   <link rel="stylesheet" href="/css/modules.css" type="text/css">
@@ -25,7 +25,7 @@
     {% block page %}{% endblock %}
   </main>
 
-  {% include 'modules/guide' %}
+  {#{% include 'modules/guide' %}#}
 
   <script src="/js/app.js"></script>
 

@@ -8,14 +8,16 @@
 
 @font-face {
   font-family: "Apercu";
-  src: url('/fonts/Apercu-Regular.otf') format('opentype');
+  src: url('/fonts/apercu-regular.woff2') format('woff2'),
+       url('/fonts/apercu-regular.woff') format('woff');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Apercu";
-  src: url('/fonts/Apercu-Medium.otf') format('opentype');
+  src: url('/fonts/apercu-medium.woff2') format('woff2'),
+       url('/fonts/apercu-medium.woff') format('woff');
   font-style: normal;
   font-weight: bold;
 }
@@ -99,8 +101,18 @@ h3, .t-h3 {
 
 }
 
-h4 {
+h4, .t-h4 {
   margin-bottom: 0;
+}
+
+h5, .t-h5 {
+  font-size: 12px;
+  line-height: calc(26/14);
+  letter-spacing: .02em;
+
+  @media(--md) {
+    font-size: 14px;
+  }
 }
 
 
@@ -135,16 +147,26 @@ address,
   }
 
   & a {
-    border-bottom: thin solid currentColor;
+    border-bottom: .1em solid currentColor;
     transition: color var(--trans);
 
     &:hover {
       color: var(--blue);
     }
 
+    @nest .has-nav & {
+
+      &:hover {
+        color: var(--white);
+      }
+      
+    }
+
   }
 
 }
+
+
 
 
 /**

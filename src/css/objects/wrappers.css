@@ -3,8 +3,13 @@
 \*------------------------------------*/
 
 .wrapper {
-  padding-left: var(--bsu);
-  padding-right: var(--bsu);
+  padding-left: calc( var(--bsu) * 2 );
+  padding-right: calc( var(--bsu) * 2 );
+
+  @media(--xs) {
+    padding-left: calc( var(--bsu) * 3 );
+    padding-right: calc( var(--bsu) * 3 );
+  }
 
   @media(--sm) {
     padding-left: var(--bsu-lg);

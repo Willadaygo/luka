@@ -16,7 +16,6 @@
   pointer-events: none;
   transition: .25s ease;
 
-  max-width: var(--bmw);
   margin-left: auto;
   margin-right: auto;
 }
@@ -27,7 +26,6 @@
 .guide__item {
   border-right: 1px solid #33ffff;
   &:first-child .guide__unit {
-    // border-left: 0;
   }
 
 }
