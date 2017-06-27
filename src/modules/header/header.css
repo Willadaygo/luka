@@ -131,6 +131,7 @@
 
   &__list {
     margin-bottom: 0;
+    overflow: hidden;
   }
 
   &__item {
