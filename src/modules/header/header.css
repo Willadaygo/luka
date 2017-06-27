@@ -20,7 +20,7 @@
   &__inner {
     position: relative;
     height: 100%;
-    
+
     @media(--sm) {
       height: auto;
     }
@@ -135,7 +135,7 @@
     @media(--smMax) {
       padding-top: var(--bsu-xl);
       padding-bottom: var(--bsu-xl);
-      overflow-y: auto;
+      overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
     
