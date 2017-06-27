@@ -427,6 +427,7 @@
   display: inline-block;
   padding: .5em 0;
   transition: color .25s cubic-bezier(0.77, 0, 0.175, 1);
+  white-space: nowrap;
 }
 
 .Header__link:hover {
@@ -488,6 +489,13 @@
 .Header__email,
 .Header__instagram {
   display: inline-block;
+  opacity: 1;
+  transition: .25s ease;
+}
+
+.Header__email:hover,
+.Header__instagram:hover {
+  opacity: .5;
 }
 
 

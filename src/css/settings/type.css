@@ -148,18 +148,11 @@ address,
 
   & a {
     border-bottom: .1em solid currentColor;
-    transition: color var(--trans);
+    transition: opacity var(--trans);
+    opacity: 1;
 
     &:hover {
-      color: var(--blue);
-    }
-
-    @nest .has-nav & {
-
-      &:hover {
-        color: var(--white);
-      }
-      
+      opacity: .5;
     }
 
   }
@@ -225,12 +218,14 @@ q {
 }
 
 blockquote {
-  quotes: "“" "”";
+  quotes: "‘" "’";
   & p {
     position: relative;
 
     &:first-of-type:before {
       content: open-quote;
+      position: absolute;
+      left: -.4em;
       margin-right: .1em;
     }
     &:last-of-type:after {

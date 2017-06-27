@@ -177,6 +177,7 @@
     display: inline-block;
     padding: .5em 0;
     transition: color var(--speed) var(--trans-inout);
+    white-space: nowrap;
 
     &:hover {
       color: var(--black);
@@ -238,6 +239,12 @@
   &__email,
   &__instagram {
     display: inline-block;
+    opacity: 1;
+    transition: var(--trans);
+
+    &:hover {
+      opacity: .5;
+    }
 
     &:first-child {
 

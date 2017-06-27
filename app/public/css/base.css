@@ -896,19 +896,12 @@ address,
 
 p a, address a, .t-para a {
   border-bottom: .1em solid currentColor;
-  transition: color .25s ease;
+  transition: opacity .25s ease;
+  opacity: 1;
 }
 
 p a:hover, address a:hover, .t-para a:hover {
-  color: #0E4AA4;
-}
-
-.has-nav p a, .has-nav address a, .has-nav .t-para a {
-
-}
-
-.has-nav p a:hover, .has-nav address a:hover, .has-nav .t-para a:hover {
-  color: #ffffff;
+  opacity: .5;
 }
 
 /**
@@ -965,7 +958,7 @@ q:after {
 }
 
 blockquote {
-  quotes: "“" "”"
+  quotes: "‘" "’"
 }
 
 blockquote p {
@@ -974,6 +967,8 @@ blockquote p {
 
 blockquote p:first-of-type:before {
   content: open-quote;
+  position: absolute;
+  left: -.4em;
   margin-right: .1em;
 }
 
