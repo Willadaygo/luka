@@ -79,6 +79,8 @@
   }
   
   &__nav {
+
+    $trans: calc( var(--speed) * 2 ) var(--trans-inout);
     position: absolute;
     top: 0;
     left: 0;
@@ -87,8 +89,8 @@
     visibility: hidden;
     transform: translateZ(0);
     transition: 
-      opacity var(--trans), 
-      visibility var(--trans);
+      opacity $trans, 
+      visibility $trans;
     z-index: 10;
 
     @media (--sm) {
@@ -131,7 +133,10 @@
 
   &__list {
     margin-bottom: 0;
-    overflow: hidden;
+    
+    @media(--smMax) {
+      overflow: hidden;
+    }
   }
 
   &__item {

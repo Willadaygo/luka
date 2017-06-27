@@ -32,4 +32,20 @@
     border-bottom: .15em solid black;
   }
 
+  & ul {
+    position: relative;
+    padding-left: 1.1em;
+    margin-bottom: var(--bsu);
+  }
+
+  & li {
+
+    &:before {
+      content: '\2014';
+      position: absolute;
+      left: 0;
+    }
+
+  }
+
 }

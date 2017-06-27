@@ -830,6 +830,10 @@ h3, .t-h3 {
   }
   }
 
+h4 {
+  margin-bottom: 0;
+}
+
 /**
  * Paragraphs.
  */
@@ -983,11 +987,20 @@ html {
   background-color: #ffdbd7;
   color: #000000;
   transition: background-color 0.5s cubic-bezier(0.77, 0, 0.175, 1)
+
 }
 
-html.has-nav {
-  background-color: #0E4AA4;
+@media   (min-width: 800px) {
+
+  html {
+
 }
+
+  html.has-nav {
+    background-color: #0E4AA4;
+  }
+
+  }
 
 body {
   font-family: "Apercu", "Helvetica Neue", Helvetica, Arial, sans-serif;

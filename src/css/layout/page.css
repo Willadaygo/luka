@@ -21,9 +21,14 @@ html {
   color: var(--black);
   transition: background-color calc( var(--speed) * 2 ) var(--trans-inout);
 
-  &.has-nav {
-    background-color: var(--blue);
+  @media(--sm) {
+
+    &.has-nav {
+      background-color: var(--blue);
+    }
+
   }
+
 }
 
 body {

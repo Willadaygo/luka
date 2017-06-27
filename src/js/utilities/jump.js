@@ -10,14 +10,14 @@ const easeInOutExpo = (t, b, c, d) => {
 
 const goToSection = (link, delay, callback) => {
   const section = document.querySelector(`${link}`)
-  jump(section, {
-    duration: 500,
-    easing: easeInOutExpo,
-  })
-
   setTimeout(() => {
-    callback()
+    jump(section, {
+      duration: 500,
+      easing: easeInOutExpo,
+    })
   }, delay)
+
+  callback()
 }
 
 const getLinks = (callback) => {
