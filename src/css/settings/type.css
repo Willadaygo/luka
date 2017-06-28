@@ -115,6 +115,16 @@ h5, .t-h5 {
   }
 }
 
+h6, .t-h6 {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: .02em;
+
+  @media(--md) {
+    font-size: 14px;
+  }
+}
+
 
 
 

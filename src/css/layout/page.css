@@ -45,6 +45,45 @@ body {
 
 }
 
+.Cred {
+  margin-bottom: var(--bsu-sm);
+  
+  @media(--xs) {
+    margin-bottom: var(--bsu);
+  }
+
+  @media(--sm) {
+    margin-bottom: 0;
+  }
+
+  & a {
+    display: inline-block;
+    border-bottom: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+
+  & span {
+    display: inline-block;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.5,.08,0,.88);
+    &:nth-child(1) { transition-delay: calc(1 * .07s);}
+    &:nth-child(2) { transition-delay: calc(2 * .07s);}
+    &:nth-child(3) { transition-delay: calc(3 * .07s);}
+    &:nth-child(4) { transition-delay: calc(4 * .07s);}
+
+    @media(--sm) {
+      opacity: 0;
+    }
+  }
+  
+}
+
 ::selection {
   background: var(--main-page-bg-selection);
   color: var(--main-page-color-selection);

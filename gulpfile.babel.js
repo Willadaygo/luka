@@ -22,7 +22,7 @@ const $ = loadPlugins({
 })
 
 // const production = !!process.env.NODE_ENV
-const production = false
+const production = true
 
 gulp.task('browserSync', browserSync($, production))
 gulp.task('baseStyles', baseStyles($, production))
