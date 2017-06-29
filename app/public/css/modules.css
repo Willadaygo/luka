@@ -21,33 +21,6 @@
  */
 
 /*------------------------------------*\
-  #___
-\*------------------------------------*/
-
-
-/*------------------------------------*\
-  #Global Variables
-\*------------------------------------*/
-
-/**
- * Global Variables.
- */
-
-:root {
-  /* Base Spacing Units */
-  /* Base Max Width */
-  /* Transition */
-  /* Font */
-  /* Light */
-  /* UI */
-  /* Type */
-}
-
-/**
- * Breakpoints.
- */
-
-/*------------------------------------*\
   #Content
 \*------------------------------------*/
 
@@ -126,6 +99,33 @@
   position: absolute;
   left: 0;
 }
+/*------------------------------------*\
+  #Global Variables
+\*------------------------------------*/
+
+/**
+ * Global Variables.
+ */
+
+:root {
+  /* Base Spacing Units */
+  /* Base Max Width */
+  /* Transition */
+  /* Font */
+  /* Light */
+  /* UI */
+  /* Type */
+}
+
+/**
+ * Breakpoints.
+ */
+
+/*------------------------------------*\
+  #___
+\*------------------------------------*/
+
+
 /*------------------------------------*\
   #Global Variables
 \*------------------------------------*/
@@ -576,8 +576,6 @@
 .Header__bottom-right {
   margin-bottom: 0;
   position: fixed;
-  width: .5em;
-  height: .5em;
   bottom: 20px;
   right: 20px;
   z-index: 20;
@@ -609,15 +607,19 @@
 .Header__cred {
   display: block;
   position: absolute;
-  top: .2em;
-  right: 100%;
-  width: 12em;
+  top: -.075em;
+  right: 0;
   white-space: nowrap;
+}
+
+.Header__cred a {
+  display: block;
+  padding-right: 2.25em;
 }
 
 
 
-.Header__bottom-right:hover .Header__cred span {
+.Header__cred a:hover span {
   opacity: 1;
 }
 

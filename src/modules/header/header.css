@@ -317,8 +317,6 @@
     
     margin-bottom: 0;
     position: fixed;
-    width: .5em;
-    height: .5em;
     bottom: var(--bsu-sm);
     right: var(--bsu-sm);
     z-index: 20;
@@ -347,17 +345,23 @@
   &__cred {
     display: block;
     position: absolute;
-    top: .2em;
-    right: 100%;
-    width: 12em;
+    top: -.075em;
+    right: 0;
+    
     white-space: nowrap;
 
-    @nest .Header__bottom-right:hover & {
+    & a {
+      display: block;
+      padding-right: 2.25em;
 
-      & span {
-        opacity: 1;
+      &:hover {
+
+        & span {
+          opacity: 1;
+        }
+
       }
-      
+
     }
 
     @media(--smMax) {
