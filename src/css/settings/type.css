@@ -159,6 +159,7 @@ address,
     border-bottom: .1em solid currentColor;
     transition: opacity var(--trans);
     opacity: 1;
+    line-height: 1.75;
 
     &:hover {
       opacity: .5;
@@ -197,7 +198,7 @@ small {
 }
 
 strong, b {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 i {

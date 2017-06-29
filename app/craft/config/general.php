@@ -18,9 +18,9 @@ return [
 		'devMode' => true,
 		'usePathInfo' => true,
 	],
-	'.com' => [
+	'.agency' => [
 		'environmentVariables' => [
-			'siteUrl' => 'http://luka.com/'
+			'siteUrl' => 'https://www.luka.agency/'
 		],
 		'devMode' => false,
 	]

@@ -176,11 +176,14 @@
     position: relative;
     display: inline-block;
     padding: .5em 0;
-    transition: color var(--speed) var(--trans-inout);
+    transition: opacity var(--speed) var(--trans-inout);
+    opacity: 1;
     white-space: nowrap;
 
-    &:hover {
-      color: var(--black);
+    @media(--smMax) {
+      &:hover {
+        opacity: .5;
+      }
     }
     
     @media(--xs) {
@@ -190,6 +193,7 @@
     @media(--sm) {
       overflow: hidden;
       padding: .5em 0;
+      transition: color var(--speed) var(--trans-inout);
 
       &:after {
         content: '';

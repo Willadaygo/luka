@@ -46,6 +46,7 @@ body {
 }
 
 .Cred {
+  font-weight: normal;
   margin-bottom: var(--bsu-sm);
   
   @media(--xs) {
