@@ -10,7 +10,7 @@
 return [
 	'*' => [
 		'environmentVariables' => [
-			'siteUrl' => 'https://luka.dev/'
+			'siteUrl' => 'http://luka.dev/'
 		],
 		'enableCsrfProtection' => true,
 		'omitScriptNameInUrls' => true,
