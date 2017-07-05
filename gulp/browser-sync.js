@@ -3,8 +3,8 @@ export default $ => (
     $.browserSync.init({
       open: true,
       notify: false,
-      proxy: 'http://luka.dev/',
-      https: false,
+      proxy: 'https://luka.dev/',
+      https: true,
     })
   }
 )
