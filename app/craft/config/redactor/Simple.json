@@ -1,3 +1,5 @@
 {
-	"buttons": ["bold","italic"]
+	"buttons": ["format","link","bold"],
+	"formatting": ["p"],
+	"plugins": ["source","fullscreen"]
 }
