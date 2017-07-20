@@ -982,7 +982,7 @@ q:after {
 }
 
 blockquote {
-  quotes: "‘" "’"
+  quotes: "\2018""\2019"
 }
 
 blockquote p {

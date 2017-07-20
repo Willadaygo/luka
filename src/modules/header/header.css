@@ -243,11 +243,11 @@
   &__email,
   &__instagram {
     display: inline-block;
-    opacity: 1;
+    color: var(--black);
     transition: var(--trans);
 
     &:hover {
-      opacity: .5;
+      color: color( var(--black) a(50%) );
     }
 
     &:first-child {
@@ -260,7 +260,7 @@
         margin-left: .5em;
         width: var(--bsu-lg);
         height: 1px;
-        background-color: currentColor;
+        background-color: var(--black);
       }
 
     }

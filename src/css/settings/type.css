@@ -235,7 +235,7 @@ q {
 }
 
 blockquote {
-  quotes: "‘" "’";
+  quotes: "\2018""\2019";
   & p {
     position: relative;
 

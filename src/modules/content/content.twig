@@ -1,5 +1,43 @@
 <div class="Content">
 
+  {# {% set headings = entry.order %}
+  
+  {% set sections = craft.entries.section('sections') %}
+
+  {% for section in sections %}
+
+    <section class="Content__item" id="{{ headings[loop.index0].title|kebab }}">
+
+      <h2 class="Content__title">{{ headings[loop.index0].title }}</h2>
+
+    </section>
+
+    {% set blocks = section.blocks %}
+    {% for block in blocks %}
+
+      {% switch block.type %}
+
+      {% case 'copy' %}
+        <div class="Content__copy">
+          {{ block.text }}
+        </div>
+
+      {% case 'lists' %}
+        <div class="Content__copy">
+           {{ block.columnOneTitle }}
+           {{ block.columnTwoTitle }} 
+        </div>
+
+      {% case 'quotes' %}
+        <div class="Content__copy">
+           {{ block.quote }} 
+        </div>
+
+      {% endswitch %}
+
+    {% endfor %}
+  {% endfor %} #}
+
   <section class="Content__item" id="our-story">
 
     <h2 class="Content__title">Our Story</h2>
