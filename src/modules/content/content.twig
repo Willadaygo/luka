@@ -1,44 +1,67 @@
 <div class="Content">
 
-  {# {% set headings = entry.order %}
-  
-  {% set sections = craft.entries.section('sections') %}
+  {% set order = entry.order %}
+  {% set sections = craft.entries.section('sections') %} 
 
   {% for section in sections %}
 
-    <section class="Content__item" id="{{ headings[loop.index0].title|kebab }}">
+    <section class="Content__item" id="{{ order[loop.index0].title|kebab }}">
 
-      <h2 class="Content__title">{{ headings[loop.index0].title }}</h2>
+      <h2 class="Content__title">{{ order[loop.index0].title }}</h2>
 
+      {% set blocks = order[loop.index0].blocks %}
+      {% for block in blocks %}
+
+        {% switch block.type %}
+
+        {% case 'copy' %}
+          {{ block.text }}
+
+        {% case 'lists' %}
+          <div class="grid  grid--rigid">
+            <div class="grid__item  u-1/2@sm">
+
+              <h4 class="Content__listTitle  t-h2">{{ block.columnOneTitle }}</h4>
+              {% set listOne = block.columnOne %}
+              {% if listOne is defined and listOne|length %}
+                <ul class="Content__list  t-h2">
+                  {% for item in listOne %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+            </div>
+
+            <div class="grid__item  u-1/2@sm">
+
+              <h4 class="Content__listTitle  t-h2">{{ block.columnTwoTitle }}</h4>
+              {% set listTwo = block.columnTwo %}
+              {% if listTwo is defined and listTwo|length %}
+                <ul class="Content__list  t-h2">
+                  {% for item in listTwo %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+            </div>
+          </div>
+
+        {% case 'quotes' %}
+          <blockquote>
+            {{ block.quote }} 
+          </blockquote>
+
+        {% endswitch %}
+
+      {% endfor %}
+   
     </section>
 
-    {% set blocks = section.blocks %}
-    {% for block in blocks %}
+  {% endfor %} 
 
-      {% switch block.type %}
-
-      {% case 'copy' %}
-        <div class="Content__copy">
-          {{ block.text }}
-        </div>
-
-      {% case 'lists' %}
-        <div class="Content__copy">
-           {{ block.columnOneTitle }}
-           {{ block.columnTwoTitle }} 
-        </div>
-
-      {% case 'quotes' %}
-        <div class="Content__copy">
-           {{ block.quote }} 
-        </div>
-
-      {% endswitch %}
-
-    {% endfor %}
-  {% endfor %} #}
-
-  <section class="Content__item" id="our-story">
+  {# <section class="Content__item" id="our-story">
 
     <h2 class="Content__title">Our Story</h2>
 
@@ -124,7 +147,7 @@
     <p><a href="mailto:hello@luka.agency">See our portfolio</a><br>
     <a href="https://www.instagram.com/luka.agency/" target="_blank">Follow us on Instagram</a></p>
 
-  </section>
+  </section> #}
 
   <h6 class="Content__cred  Cred">
     <a href="mailto:williamflrussell@gmail.com?subject=What’s%20my%20spirit%20animal%20then?">

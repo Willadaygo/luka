@@ -5,40 +5,36 @@
     <button class="Header__switch" type="button">
       <span class="Header__cross"></span>
     </button>
-
     
     <nav class="Header__nav">
       <div class="Header__scroll">
       <ul class="Header__list  t-h3">
-        <li class="Header__item">
-          <a href="#our-story" class="Header__link">Our Story</a>
-        </li>
-        <li class="Header__item">
-          <a href="#work" class="Header__link">Work</a>
-        </li>
-        <li class="Header__item">
-          <a href="#team" class="Header__link">Team</a>
-        </li>
-        <li class="Header__item">
-          <a href="#contact" class="Header__link">Contact</a>
-        </li>
+        {% for entry in entry.order %}
+          <li class="Header__item">
+            <a href="#{{entry.title|kebab }}" class="Header__link">{{entry.title }}</a>
+          </li>
+        {% endfor %}
       </ul>
       </div>
     </nav>
     
-
   </div>
 
 </header>
 
 <div class="Header__top-mid">
-  <h5 class="Header__email">
-    <a href="mailto:hello@luka.agency">hello@luka.agency</a>
-  </h5>
-
-  <h5 class="Header__instagram">
-    <a href="https://www.instagram.com/luka.agency/" target="_blank">Instagram</a>
-  </h5>
+  
+  {% if contact['generalEmail'] is defined and contact.generalEmail|length %}
+    <h5 class="Header__email">
+      <a href="mailto:{{ contact.generalEmail }}">{{ contact.generalEmail }}</a>
+    </h5>
+  {% endif %}
+  
+  {% if contact['instagramLink'] is defined and contact.instagramLink|length %}
+    <h5 class="Header__instagram">
+      <a href="{{ contact.instagramLink }}" target="_blank">Instagram</a>
+    </h5>
+  {% endif %}
 </div>
 
 <div class="Header__top-right">
