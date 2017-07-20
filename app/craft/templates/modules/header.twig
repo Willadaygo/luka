@@ -8,12 +8,26 @@
     
     <nav class="Header__nav">
       <div class="Header__scroll">
-      <ul class="Header__list  t-h3">
+      {# <ul class="Header__list  t-h3">
         {% for entry in entry.order %}
           <li class="Header__item">
             <a href="#{{entry.title|kebab }}" class="Header__link">{{entry.title }}</a>
           </li>
         {% endfor %}
+      </ul> #}
+      <ul class="Header__list  t-h3">
+        <li class="Header__item">
+          <a href="#our-story" class="Header__link">Our Story</a>
+        </li>
+        <li class="Header__item">
+          <a href="#work" class="Header__link">Work</a>
+        </li>
+        <li class="Header__item">
+          <a href="#team" class="Header__link">Team</a>
+        </li>
+        <li class="Header__item">
+          <a href="#contact" class="Header__link">Contact</a>
+        </li>
       </ul>
       </div>
     </nav>
